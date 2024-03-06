@@ -6,16 +6,18 @@ string[] str = ["Hello", "2", "world", ":-)"];
 //string[] str = ["Russia", "Denmark", "Kazan"];
 
 
+
 /// <summary>
-/// Функция возвращает соличество элементов менше или равно n
+/// Функция создает новый массив с количеством элементов count и копирует туда строки удовлетворяжщие критерию
 /// </summary>
-/// <param name="array">Входящий массив состоящий из строй</param>
+/// <param name="array">Входящий массив</param>
 /// <param name="n">целое число. отбираются строки длинна которых не превышает  это значение</param>
-/// <returns>Возвращает количество строк в массиве удовлетворяющее критерию</returns>
-int CountElement(string[] array, int n)
+/// <returns>Возвращает новый массив</returns>
+string[] NewArray(string[] array, int n)
 {
     int count=0;
-    for (int i =0; i<array.Length; i++)
+    for (int i =0; i<array.Length; i++) // цикл определения количества
+                                        // подходящих строк для создания новго массива нужного размера
     {
         if (array[i].Length<=n)
         {
@@ -23,22 +25,9 @@ int CountElement(string[] array, int n)
         }
     }
 
-    return count;
-}
-
-
-/// <summary>
-/// Функция создает новый массив с количеством элементов count и копирует туда строки удовлетворяжщие критерию
-/// </summary>
-/// <param name="array">Входящий массив</param>
-/// <param name="count">количество элементов в новом массиве.  Должно быт определено заранее</param>
-/// <param name="n">целое число. отбираются строки длинна которых не превышает  это значение</param>
-/// <returns>Возвращает новый массив</returns>
-string[] NewArray(string[] array, int count, int n)
-{
-    string[] result = new string[count];
+    string[] result = new string[count]; // создание нового массива
     int j = 0;
-    for (int i =0; i<array.Length; i++)
+    for (int i =0; i<array.Length; i++) // цикл копирования нужных элементов в новый массив
     {
         if (array[i].Length<=n)
             {
@@ -48,6 +37,8 @@ string[] NewArray(string[] array, int count, int n)
     }
     return result;
 }
+
+
 Console.Clear();
 Console.Write($"Изначальный массив: [{string.Join(" ; ",str)}] \n");
-Console.Write($"Новый массив с элементами по условию: [{string.Join(" ; ",NewArray(str, CountElement(str,3),3) )}]");
+Console.Write($"Новый массив с элементами по условию: [{string.Join(" ; ",NewArray(str,3) )}]");
