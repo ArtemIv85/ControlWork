@@ -12,3 +12,4 @@ C:\GB\Programing\FinalTest\obj\Debug\net8.0\refint\FinalTest.dll
 C:\GB\Programing\FinalTest\obj\Debug\net8.0\FinalTest.pdb
 C:\GB\Programing\FinalTest\obj\Debug\net8.0\FinalTest.genruntimeconfig.cache
 C:\GB\Programing\FinalTest\obj\Debug\net8.0\ref\FinalTest.dll
+C:\GB\Programing\FinalTest\obj\Debug\net8.0\FinalTest.sourcelink.json
